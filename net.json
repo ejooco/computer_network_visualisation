@@ -1,0 +1,60 @@
+[
+{"data": {"id": "Web", "label": "Web"}},
+{"data": {"id": "Gateway", "label": "Gateway"}},
+
+{"data": {"id": "dmzParent", "label": "DMZ"}},
+{"data": {"id": "dmzRouter", "label": "dmzRouter", "parent": "dmzParent"}},
+{"data": {"id": "112", "label": "112", "parent": "dmzParent"}},
+{"data": {"id": "113", "label": "113", "parent": "dmzParent"}},
+{"data": {"id": "114", "label": "114", "parent": "dmzParent"}},
+{"data": {"source": "dmzRouter", "target": "112", "value": 1}},
+{"data": {"source": "dmzRouter", "target": "114", "value": 1}},
+{"data": {"source": "dmzRouter", "target": "113", "value": 1}},
+{"data": {"source": "Gateway", "target": "dmzRouter", "value": 1}},
+
+{"data": {"id": "Main", "label": "Main"}},
+
+{"data": {"id": "financeParent", "label": "Finance"}},
+{"data": {"id": "financeRouter", "label": "Finance Router", "parent": "financeParent"}},
+{"data": {"id": "223", "label": "223", "parent": "financeParent"}},
+{"data": {"id": "224", "label": "224", "parent": "financeParent"}},
+{"data": {"id": "225", "label": "225", "parent": "financeParent"}},
+{"data": {"source": "Main", "target": "financeRouter", "value": 1}},
+{"data": {"source": "financeRouter", "target": "223", "value": 1}},
+{"data": {"source": "financeRouter", "target": "224", "value": 1}},
+{"data": {"source": "financeRouter", "target": "225", "value": 1}},
+
+{"data": {"id": "devParent", "label": "Dev"}},
+{"data": {"id": "devRouter", "label": "Dev Router", "parent": "devParent"}},
+{"data": {"id": "334", "label": "334", "parent": "devParent"}},
+{"data": {"id": "335","label": "335", "parent": "devParent"}},
+{"data": {"id": "336", "label": "336", "parent": "devParent"}},
+{"data": {"source": "Main", "target": "devRouter", "value": 1}},
+{"data": {"source": "devRouter", "target": "334", "value": 1}},
+{"data": {"source": "devRouter", "target": "335", "value": 1}},
+{"data": {"source": "devRouter", "target": "336", "value": 1}},
+
+
+{"data": {"id": "miscParent", "label": "Misc"}},
+{"data": {"id": "miscRouter", "label": "Misc Router", "parent":"miscParent"}},
+{"data": {"id": "445", "label": "445", "parent":"miscParent"}},
+{"data": {"id": "446", "label": "446", "parent":"miscParent"}},
+{"data": {"id": "447", "label": "447", "parent":"miscParent"}},
+{"data": {"source": "Main", "target": "miscRouter", "value": 1}},
+{"data": {"source": "miscRouter", "target": "445", "value": 1}},
+{"data": {"source": "miscRouter", "target": "446", "value": 1}},
+{"data": {"source": "miscRouter", "target": "447", "value": 1}},
+
+{"data": {"source": "Web", "target": "Gateway", "value": 1}},
+{"data": {"source": "Gateway", "target": "dmzRouter", "value": 1}},
+
+{"data": {"source": "Gateway", "target": "Main", "value": 1}},
+{"data": {"source": "Main", "target": "financeRouter", "value": 1}},
+
+{"data": {"source": "Main", "target": "devRouter", "value": 1}},
+
+{"data": {"source": "Main", "target": "miscRouter", "value": 1}},
+
+
+{"data": {"source": "Gateway", "target": "dmzRouter"}, "classes": "asset"}
+]
